@@ -43,7 +43,7 @@ namespace Exam_OOP.Exams
                     Console.Write($"Please Enter Your Answer " + (Q[i].Header == "MCQ" ? "(1 for Choice1 , 2 for Choice2 OR 3 for Choice3)\n=> " : "(1 for True OR 2 for False)\n=> "));
                     userAnsFlage = int.TryParse(Console.ReadLine(), out YourAns);
                 }
-                while (!userAnsFlage || YourAns < 0 || YourAns > Q[i].AnswersList.Length);
+                while (!userAnsFlage || YourAns <= 0 || YourAns > Q[i].AnswersList.Length);
                 Q[i].UserAnswer = new Answer(YourAns, Q[i]?.AnswersList[YourAns - 1].Body ?? "No Answer");
                 #endregion
 

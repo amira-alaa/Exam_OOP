@@ -122,13 +122,13 @@ namespace Exam_OOP.Subjects
             {
                 Console.Write("Do You Want Start Exam ? (Y , N) \n=> ");
                 isStart = Console.ReadLine();
-            
-            
+
             }
-            while (isStart is null || isStart == "");
+            while (isStart is null | isStart == "");
             Console.Clear();
             if (isStart?.ToLower() == "y" || isStart?.ToLower() == "yes") exam?.ShowExam(Q);
-            else Console.WriteLine("Okay , As You Like .");
+            else if (isStart?.ToLower() == "n" || isStart?.ToLower() == "no") Console.WriteLine("Thank You , See You Later .");
+            else return;
             #endregion
         }
         #endregion

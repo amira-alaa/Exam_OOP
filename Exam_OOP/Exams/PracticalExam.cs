@@ -40,7 +40,7 @@ namespace Exam_OOP.Exams
                     Console.Write("Please Enter Your Answer (1 for Choice1 , 2 for Choice2 OR 3 for Choice3 )\n=> ");
                     userAnsFlage = int.TryParse(Console.ReadLine(), out YourAns);
                 }
-                while (!userAnsFlage || YourAns < 0 || YourAns > Q[i].AnswersList.Length);
+                while (!userAnsFlage || YourAns <= 0 || YourAns > Q[i].AnswersList.Length);
                 Q[i].UserAnswer = new Answer(YourAns, Q[i]?.AnswersList[YourAns - 1].Body ?? "No Answer");
                 #endregion
 
