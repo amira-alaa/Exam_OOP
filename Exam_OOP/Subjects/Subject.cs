@@ -37,7 +37,7 @@ namespace Exam_OOP.Subjects
                 Console.Write("Please Enter Type Of Exam ( 1 for Practical , 2 for Final )\n=> ");
                 flage = int.TryParse(Console.ReadLine(), out num);
             }
-            while (!flage || num > 2 || num < 0);
+            while (!flage || num > 2 || num <= 0);
 
             #endregion
 
