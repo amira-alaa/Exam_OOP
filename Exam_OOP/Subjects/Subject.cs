@@ -37,7 +37,7 @@ namespace Exam_OOP.Subjects
                 Console.Write("Please Enter Type Of Exam ( 1 for Practical , 2 for Final )\n=> ");
                 flage = int.TryParse(Console.ReadLine(), out num);
             }
-            while (!flage || num > 2 || num < 0);
+            while (!flage || num > 2 || num <= 0);
 
             #endregion
 
@@ -93,7 +93,7 @@ namespace Exam_OOP.Subjects
                         Console.Write("Please Enter The Type Of Question (1 for MCQ | 2 for True | False)\n=> ");
                         flageType = int.TryParse(Console.ReadLine(), out typeOfQuestion);
                     }
-                    while (!flageType || typeOfQuestion > 2 || typeOfQuestion < 0);
+                    while (!flageType || typeOfQuestion > 2 || typeOfQuestion <= 0);
                     #endregion
 
                     Console.Clear();
