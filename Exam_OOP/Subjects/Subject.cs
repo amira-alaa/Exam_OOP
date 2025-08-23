@@ -123,14 +123,17 @@ namespace Exam_OOP.Subjects
                 Console.Write("Do You Want Start Exam ? (Y , N) \n=> ");
                 isStart = Console.ReadLine();
 
-            }
-            while (isStart is null | isStart == "");
+            }                                            
+            while (isStart is null || isStart == "" || (isStart.ToLower() != "y" && isStart.ToLower() != "n"));
             Console.Clear();
-            if (isStart?.ToLower() == "y" || isStart?.ToLower() == "yes") exam?.ShowExam(Q);
-            else if (isStart?.ToLower() == "n" || isStart?.ToLower() == "no") Console.WriteLine("Thank You , See You Later .");
-            else return;
+            if (isStart?.ToLower() == "y") exam?.ShowExam(Q);
+            else Console.WriteLine("Thank You , See You Later .");
+
+
+            //while (isStart is null || isStart == "");
             #endregion
         }
         #endregion
     }
 }
+    
